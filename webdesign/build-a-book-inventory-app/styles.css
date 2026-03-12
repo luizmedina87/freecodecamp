@@ -1,0 +1,56 @@
+tr[class="read"] {
+  background: linear-gradient(to right, rgb(208, 224, 208), rgb(119, 141, 119));
+}
+tr[class="in-progress"] {
+  background: linear-gradient(to right, rgb(198, 198, 238), rgb(141, 141, 228));
+}
+
+tr[class="to-read"] {
+  background: linear-gradient(to right, rgb(226, 204, 204), rgb(194, 140, 140));
+}
+
+span {
+  display: inline-block;
+}
+
+tr[class="to-read"] span[class="status"] {
+  border: 1px solid red;
+  background-image: radial-gradient(circle, #faf4f4, #f5caca);
+}
+
+tr[class="read"] span[class="status"] {
+  border: 1px solid green;
+  background-image: radial-gradient(circle, #e4f7e3, #a9beab);
+}
+
+tr[class="in-progress"] span[class="status"] {
+  border: 1px solid blue;
+  background-image: radial-gradient(circle, #eae9f7, #b8b2ec);
+}
+
+span[class="status"], span[class^="rate"] {
+  height: 20px;
+  width: 100px;
+  padding: 3px;
+}
+
+span[class^="rate"] > span {
+  border: solid 1px black;
+  background-color: orange;
+  border-radius: 3px;
+  margin: 1px;
+  height: 20px;
+  width: 20px;
+}
+
+span[class~="one"] :first-child {
+  background-image: linear-gradient(to right, rgb(233, 247, 235), rgb(243, 217, 217));
+}
+
+span[class~="two"] :nth-child(-n+2) {
+  background-image: linear-gradient(to right, rgb(233, 247, 235), rgb(243, 217, 217));
+}
+
+span[class~="three"] span {
+  background-image: linear-gradient(to right, rgb(233, 247, 235), rgb(243, 217, 217));
+}
