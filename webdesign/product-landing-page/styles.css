@@ -1,0 +1,30 @@
+#header-img {
+  max-width: 300px;
+}
+
+#nav-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+#nav-bar ul {
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+
+#email {
+  display: block;
+}
+
+@media screen and (max-width="500px") {
+  html {
+    background-color: orange;
+  }
+}
