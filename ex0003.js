@@ -17,6 +17,23 @@
 // 0 <= x <= 4
 // 0 <= y <= 4
 
+const countPoints = (scores) => {
+  let scoreArray = scores.split(":");
+  let scoreHomeTeam = scoreArray[0];
+  let scoreOpponent = scoreArray[1];
+
+  if (scoreHomeTeam > scoreOpponent) {
+    return 3;
+  } else if (scoreHomeTeam < scoreOpponent) {
+    return 0;
+  } else return 1;
+};
+
 function points(games) {
-  return 0;
+  let points = games.map(countPoints);
+  return points.reduce((acc, cur) => {
+    return acc + cur;
+  }, 0);
 }
+
+console.log(points(["3:1", "2:2", "0:1"]));
