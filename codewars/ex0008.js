@@ -13,5 +13,34 @@
 // Hint: Don't forget to check for bad values like null/undefined
 
 function countSheeps(sheep) {
-  return sheep.filter((i) => i).length;
+  return sheep.filter(Boolean).length;
 }
+
+console.log(
+  countSheeps([
+    true,
+    true,
+    true,
+    false,
+    true,
+    true,
+    true,
+    true,
+    true,
+    false,
+    true,
+    false,
+    true,
+    false,
+    false,
+    true,
+    true,
+    true,
+    true,
+    true,
+    false,
+    false,
+    true,
+    true,
+  ]),
+);
