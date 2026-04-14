@@ -1,11 +1,21 @@
-function updateMessageStatus(messageId, currentStatus, isDelivered) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      // ?
-    }, 500);
-  });
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    if (getRandomBool()) {
+      resolve("resolved!");
+    } else {
+      reject("rejected!");
+    }
+  }, 1000);
+});
+
+function getRandomBool() {
+  return Math.random() < 0.5;
 }
 
-// don't touch below this line
-
-export { updateMessageStatus };
+promise
+  .then((message) => {
+    console.log(`The promise finally ${message}`);
+  })
+  .catch((message) => {
+    console.log(`The promise finally ${message}`);
+  });
